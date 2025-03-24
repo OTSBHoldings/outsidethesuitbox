@@ -23,7 +23,11 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-richBlack/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-display font-bold gold-text">Outside the Suitbox</span>
+          <img 
+            src="/lovable-uploads/b20c775d-6744-493e-81b3-bfa2f554d8ed.png" 
+            alt="Outside the Suitbox" 
+            className="h-16 w-auto transition-all duration-300"
+          />
         </a>
 
         {/* Desktop Menu */}
