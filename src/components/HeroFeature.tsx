@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './Logo';
 
 const HeroFeature = () => {
   return (
@@ -18,11 +19,7 @@ const HeroFeature = () => {
       <div className="container mx-auto px-6 relative z-20 text-center py-20">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8 opacity-0 animate-fade-in">
-            <img 
-              src="/lovable-uploads/b20c775d-6744-493e-81b3-bfa2f554d8ed.png" 
-              alt="Outside the Suitbox Logo" 
-              className="h-32 md:h-40 mx-auto"
-            />
+            <Logo size="lg" className="mx-auto" />
           </div>
           
           <h1 className="heading-xl mb-6 text-white opacity-0 animate-fade-in-delay-1">
@@ -30,12 +27,31 @@ const HeroFeature = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-2">
-            We help ambitious brands break free from ordinary marketing approaches to achieve extraordinary results.
+            We help ambitious brands break free from ordinary marketing approaches to achieve extraordinary results through strategic vision and creative excellence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-delay-3">
             <a href="#services" className="btn-gold">Explore Services</a>
             <a href="#contact" className="btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+      
+      {/* Stats overlay */}
+      <div className="absolute bottom-10 left-0 right-0 z-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {[
+              { number: "10+", label: "Years Experience" },
+              { number: "150+", label: "Satisfied Clients" },
+              { number: "94%", label: "Client Retention" },
+              { number: "25+", label: "Industry Awards" }
+            ].map((stat, index) => (
+              <div key={index} className="glass-card p-4 opacity-0 animate-fade-in-delay-3">
+                <div className="text-2xl md:text-3xl font-bold text-gold mb-1">{stat.number}</div>
+                <div className="text-white/70 text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
