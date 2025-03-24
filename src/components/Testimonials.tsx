@@ -107,7 +107,7 @@ const Testimonials = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div ref={testimonialRef} className="glass-card gold-border p-10 mb-8 relative opacity-0">
+          <div ref={testimonialRef} className="glass-card gold-border p-10 mb-8 relative">
             <Quote className="absolute top-6 left-6 text-gold/20 h-16 w-16" />
             <div className="relative z-10">
               <p className="text-xl mb-8 leading-relaxed">{testimonials[currentIndex].quote}</p>
