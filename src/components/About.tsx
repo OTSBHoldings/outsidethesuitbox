@@ -76,6 +76,7 @@ const About = () => {
           <div ref={imageRef} className="opacity-0">
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-richBlack-dark/80 mix-blend-overlay"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80"
                   alt="Team collaboration" 

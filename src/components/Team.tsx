@@ -50,7 +50,9 @@ const TeamMember = ({ name, role, image, delay }: TeamMemberProps) => {
         />
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 p-6">
+      <div className="absolute inset-0 bg-gradient-to-t from-richBlack-dark to-transparent opacity-80"></div>
+      
+      <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-500 group-hover:translate-y-0">
         <h3 className="text-xl font-bold">{name}</h3>
         <p className="text-gold mb-4">{role}</p>
         
