@@ -16,15 +16,51 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-richBlack overflow-x-hidden">
       <Navbar />
-      <HeroFeature />
-      <Services />
-      <About />
-      <Process />
-      <Portfolio />
-      <Testimonials />
-      <Team />
+      
+      {/* Hero Section */}
+      <section id="home">
+        <HeroFeature />
+      </section>
+      
+      {/* Services Section */}
+      <section id="services">
+        <Services />
+      </section>
+      
+      {/* About Section */}
+      <section id="about">
+        <About />
+      </section>
+      
+      {/* Process Section */}
+      <section id="process">
+        <Process />
+      </section>
+      
+      {/* Portfolio Section */}
+      <section id="portfolio">
+        <Portfolio />
+      </section>
+      
+      {/* Testimonials Section */}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      
+      {/* Team Section */}
+      <section id="team">
+        <Team />
+      </section>
+      
+      {/* Call to Action */}
       <CallToAction />
-      <Contact />
+      
+      {/* Contact Section */}
+      <section id="contact">
+        <Contact />
+      </section>
+      
+      {/* Footer */}
       <Footer />
     </div>
   );

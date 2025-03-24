@@ -9,7 +9,7 @@ const CallToAction = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
         <img 
-          src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" 
+          src="/lovable-uploads/6e0b9d96-dc3c-4361-8cc8-63bf3b3dc8ed.png" 
           alt="Background" 
           className="w-full h-full object-cover"
         />
@@ -38,6 +38,9 @@ const CallToAction = () => {
       {/* Decorative elements */}
       <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full bg-gold/5 blur-3xl"></div>
       <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-gold/5 blur-3xl"></div>
+      
+      {/* Gold frame overlay */}
+      <div className="absolute inset-0 pointer-events-none z-5 border-[12px] border-gold/20 m-12 sm:m-16 md:m-20 lg:m-24"></div>
     </section>
   );
 };

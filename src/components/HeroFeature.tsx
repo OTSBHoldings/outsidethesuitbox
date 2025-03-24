@@ -1,16 +1,24 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { ChevronDown } from 'lucide-react';
 
 const HeroFeature = () => {
+  const scrollToNextSection = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-richBlack-dark/60 z-10"></div>
         <img 
-          src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" 
-          alt="Elegant suit with gold frame"
+          src="/lovable-uploads/6e0b9d96-dc3c-4361-8cc8-63bf3b3dc8ed.png" 
+          alt="Elegant suit with gold branding"
           className="w-full h-full object-cover"
         />
       </div>
@@ -58,6 +66,11 @@ const HeroFeature = () => {
       
       {/* Gold frame overlay */}
       <div className="absolute inset-0 pointer-events-none z-10 border-[20px] border-gold/20 m-8 sm:m-12 md:m-16 lg:m-20"></div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce z-30" onClick={scrollToNextSection}>
+        <ChevronDown className="text-gold h-10 w-10" />
+      </div>
     </section>
   );
 };
