@@ -78,8 +78,8 @@ const About = () => {
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-richBlack-dark/80 mix-blend-overlay"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80"
-                  alt="Team collaboration" 
+                  src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png"
+                  alt="Think outside the suitbox" 
                   className="w-full h-full object-cover"
                 />
               </div>
