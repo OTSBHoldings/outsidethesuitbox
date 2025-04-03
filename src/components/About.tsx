@@ -1,64 +1,33 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const About = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === contentRef.current) {
-              entry.target.classList.add('animate-fade-in-left');
-            } else if (entry.target === imageRef.current) {
-              entry.target.classList.add('animate-fade-in-right');
-            }
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
-    }
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
-      }
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
-
   const features = [
-    "Results-driven strategies tailored to your objectives",
-    "Creative solutions that break industry norms",
-    "Data-backed decision making for maximum ROI",
-    "Award-winning team of industry experts"
+    "Strategically engineered brand narratives",
+    "Aesthetically advanced creative expressions",
+    "Data-informed decision architecture",
+    "Elite team of industry innovators"
   ];
 
   return (
     <section id="about" className="section-padding bg-richBlack-light">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div ref={contentRef} className="opacity-0">
-            <h5 className="uppercase tracking-wider text-gold mb-4">About Us</h5>
-            <h2 className="heading-lg mb-6">Revolutionizing Brand Experiences</h2>
+          <div>
+            <h5 className="uppercase tracking-wider text-gold mb-4">Our Approach</h5>
+            <h2 className="heading-lg mb-6">THE PHILOSOPHY</h2>
             <p className="text-white/70 mb-8">
-              Founded in 2018, <span className="text-gold font-semibold">Outside the Suitbox</span> was born from a vision to challenge conventional marketing approaches. We believe that extraordinary results come from daring to think differently and pushing creative boundaries.
+              Established in 2018 to redefine the boundaries of what marketing can achieve.
             </p>
             <p className="text-white/70 mb-8">
-              Our team combines strategic insight with creative excellence to deliver marketing solutions that not only meet business objectives but create meaningful connections with audiences.
+              The truth most agencies won't tell you: exceptional marketing isn't about following trends—it's about setting them. 
+              <span className="text-gold font-semibold"> Outside the Suitbox</span> was founded on the principle that true 
+              brand elevation requires both artistic vision and analytical precision.
+            </p>
+            <p className="text-white/70 mb-8">
+              Our methodology combines sophisticated strategy with flawless execution to create brand experiences that 
+              transcend conventional marketing and deliver measurable, sustainable growth.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -70,26 +39,33 @@ const About = () => {
               ))}
             </div>
             
-            <a href="#contact" className="btn-gold">Get in Touch</a>
+            <a href="#contact" className="btn-gold">INITIATE THE PROCESS</a>
           </div>
           
-          <div ref={imageRef} className="opacity-0">
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-richBlack-dark/80 mix-blend-overlay"></div>
-                <img 
-                  src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png"
-                  alt="Think outside the suitbox" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div className="absolute -bottom-8 -left-8 glass-card gold-border p-6 w-64">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-bold">Client Success</h4>
-                  <span className="text-gold text-2xl font-bold">97%</span>
+          <div className="relative">
+            <div className="aspect-square rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-richBlack-dark/80 mix-blend-overlay"></div>
+              <img 
+                src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png"
+                alt="Think outside the suitbox" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="absolute -bottom-8 -left-8 glass-card gold-border p-6">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between mb-1">
+                  <h4 className="font-bold text-sm uppercase">Client Retention</h4>
+                  <span className="text-gold text-xl font-bold">97%</span>
                 </div>
-                <p className="text-sm text-white/70">Client satisfaction rate across our services</p>
+                <div className="flex items-center justify-between mb-1">
+                  <h4 className="font-bold text-sm uppercase">Average ROI</h4>
+                  <span className="text-gold text-xl font-bold">4.2X</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <h4 className="font-bold text-sm uppercase">Industries Transformed</h4>
+                  <span className="text-gold text-xl font-bold">35+</span>
+                </div>
               </div>
             </div>
           </div>

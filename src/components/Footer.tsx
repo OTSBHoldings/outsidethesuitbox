@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -25,9 +26,9 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-16">
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-display font-bold gold-text mb-6">Outside the Suitbox</h3>
+            <h3 className="text-2xl font-display font-bold uppercase gold-text mb-6">Outside the Suitbox</h3>
             <p className="text-white/70 mb-6">
-              Redefining marketing with innovative strategies that elevate brands and drive exceptional results.
+              Redefining excellence in strategic brand development.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold transition-colors duration-300">
@@ -46,40 +47,43 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-6 uppercase">Navigate</h4>
             <ul className="space-y-3">
               <li><a href="#services" className="text-white/70 hover:text-gold transition-colors duration-300">Services</a></li>
-              <li><a href="#about" className="text-white/70 hover:text-gold transition-colors duration-300">About Us</a></li>
-              <li><a href="#testimonials" className="text-white/70 hover:text-gold transition-colors duration-300">Testimonials</a></li>
-              <li><a href="#team" className="text-white/70 hover:text-gold transition-colors duration-300">Our Team</a></li>
+              <li><a href="#about" className="text-white/70 hover:text-gold transition-colors duration-300">About</a></li>
+              <li><a href="#testimonials" className="text-white/70 hover:text-gold transition-colors duration-300">Results</a></li>
+              <li><a href="#team" className="text-white/70 hover:text-gold transition-colors duration-300">Team</a></li>
               <li><a href="#contact" className="text-white/70 hover:text-gold transition-colors duration-300">Contact</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Services</h4>
+            <h4 className="text-lg font-bold mb-6 uppercase">Services</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Brand Development</a></li>
-              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Digital Marketing</a></li>
-              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Creative Design</a></li>
-              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Analytics & Performance</a></li>
-              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Global Market Expansion</a></li>
+              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Brand Elevation</a></li>
+              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Digital Campaigns</a></li>
+              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Visual Identity</a></li>
+              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Performance Optimization</a></li>
+              <li><a href="#" className="text-white/70 hover:text-gold transition-colors duration-300">Global Extension</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Contact Info</h4>
+            <h4 className="text-lg font-bold mb-6 uppercase">Contact</h4>
             <ul className="space-y-3 text-white/70">
               <li>123 Innovation Way, San Francisco, CA 94105</li>
               <li>+1 (555) 123-4567</li>
-              <li>info@outsidethesuitbox.com</li>
-              <li>Mon-Fri: 9AM - 6PM</li>
+              <li>inquiries@outsidethesuitbox.com</li>
+              <li>Mon-Fri: 9AM - 6PM PST</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-white/50">
-          <p>&copy; {new Date().getFullYear()} Outside the Suitbox. All rights reserved.</p>
+          <p className="uppercase text-xs tracking-wider">© {new Date().getFullYear()} Outside the Suitbox. All rights reserved.</p>
+          <p className="text-xs mt-2">
+            <a href="#" className="hover:text-gold">Privacy Policy</a> | <a href="#" className="hover:text-gold">Terms of Service</a>
+          </p>
         </div>
       </div>
     </footer>
