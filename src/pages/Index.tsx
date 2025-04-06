@@ -33,19 +33,19 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Outside the Suitbox | Strategic Brand Elevation</title>
-        <meta name="description" content="Outside the Suitbox helps ambitious brands break free from ordinary marketing approaches to achieve extraordinary results through strategic brand elevation and creative excellence." />
+        <title>Ragged Edge | Strategic Brand Elevation</title>
+        <meta name="description" content="Ragged Edge helps ambitious brands break free from ordinary marketing approaches to achieve extraordinary results through strategic brand elevation and creative excellence." />
         <meta name="keywords" content="brand strategy, creative marketing, brand elevation, luxury branding, strategic marketing, digital campaigns" />
-        <meta property="og:title" content="Outside the Suitbox | Strategic Brand Elevation" />
+        <meta property="og:title" content="Ragged Edge | Strategic Brand Elevation" />
         <meta property="og:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://outsidethesuitbox.com" />
+        <meta property="og:url" content="https://raggededge.com" />
         <meta property="og:image" content="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Outside the Suitbox | Strategic Brand Elevation" />
+        <meta name="twitter:title" content="Ragged Edge | Strategic Brand Elevation" />
         <meta name="twitter:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
         <meta name="twitter:image" content="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" />
-        <link rel="canonical" href="https://outsidethesuitbox.com" />
+        <link rel="canonical" href="https://raggededge.com" />
       </Helmet>
       <div className="min-h-screen bg-richBlack overflow-x-hidden">
         <Navbar />
