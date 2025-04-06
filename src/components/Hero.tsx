@@ -52,16 +52,16 @@ const Hero = () => {
             ref={titleRef}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
           >
-            BREAKING <br className="hidden md:block" />
-            THE FRAME. <br className="hidden md:block" />
-            <span className="gold-text shimmer-effect">REDEFINING SUCCESS.</span>
+            CHAMPIONS <br className="hidden md:block" />
+            IDEAS <br className="hidden md:block" />
+            <span className="gold-text shimmer-effect">NOT EGOS.</span>
           </h1>
           
           <p 
             ref={textRef}
             className="text-lg md:text-xl text-white/80 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
           >
-            We help you make strategic and creative leaps that will drive change inside and outside your business. Not just disruption, but meaningful transformation.
+            We'll help you make strategic and creative leaps that will drive change inside and outside your business. We will challenge you, we will change you, and you just might change the world.
           </p>
           
           <div 

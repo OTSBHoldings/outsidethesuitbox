@@ -35,7 +35,7 @@ const Index = () => {
       <Helmet>
         <title>Ragged Edge | Strategic Brand Elevation</title>
         <meta name="description" content="Ragged Edge helps ambitious brands break free from ordinary marketing approaches to achieve extraordinary results through strategic brand elevation and creative excellence." />
-        <meta name="keywords" content="brand strategy, creative marketing, brand elevation, luxury branding, strategic marketing, digital campaigns" />
+        <meta name="keywords" content="brand strategy, creative marketing, brand elevation, luxury branding, strategic marketing, digital campaigns, Ragged Edge, ideas not egos" />
         <meta property="og:title" content="Ragged Edge | Strategic Brand Elevation" />
         <meta property="og:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
         <meta property="og:type" content="website" />
