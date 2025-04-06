@@ -104,19 +104,23 @@ const About = () => {
                   ref={el => featureRefs.current[index] = el}
                 >
                   <CheckCircle className="text-gold mr-3 h-5 w-5 flex-shrink-0 mt-0.5" />
-                  <p className="text-white/80 text-sm">{feature}</p>
+                  <p className="text-white/80 text-sm leading-relaxed">{feature}</p>
                 </div>
               ))}
             </div>
             
-            <a 
-              href="#contact" 
-              className="btn-gold inline-block text-xs tracking-widest opacity-0 translate-y-10 transition-all duration-700 ease-out"
+            <div 
+              className="opacity-0 translate-y-10 transition-all duration-700 ease-out"
               style={{ transitionDelay: '1500ms' }}
               ref={el => textRefs.current[5] = el}
             >
-              INITIATE THE PROCESS
-            </a>
+              <a 
+                href="#contact" 
+                className="btn-gold inline-block text-xs tracking-widest"
+              >
+                INITIATE THE PROCESS
+              </a>
+            </div>
           </div>
           
           <div 
