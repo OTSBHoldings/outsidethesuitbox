@@ -11,19 +11,19 @@ type TestimonialProps = {
 
 const testimonials: TestimonialProps[] = [
   {
-    quote: "Outside the Suitbox transformed our brand identity and doubled our market presence in just six months. Their innovative approach and dedication to results is unmatched in the industry.",
+    quote: "Outside the Suitbox fundamentally transformed our market position. Their strategic approach elevated our brand from competitor to category leader in under a year.",
     author: "Alexandra Chen",
     position: "Chief Marketing Officer",
     company: "Nexus Technologies"
   },
   {
-    quote: "Working with this team has been game-changing for our startup. They understand our vision and have helped us communicate it effectively to our target audience with stunning creative work.",
-    author: "Marcus Johnson",
-    position: "Founder & CEO",
-    company: "Elevate Solutions"
+    quote: "After cycling through three 'top' agencies with minimal results, Outside the Suitbox delivered immediate impact. Their work directly contributed to our most profitable quarter in company history.",
+    author: "James Wilson",
+    position: "CEO",
+    company: "Vertex Solutions"
   },
   {
-    quote: "The strategic insights and creative campaigns delivered by Outside the Suitbox helped us successfully enter three new markets. Their data-driven approach ensured optimal resource allocation.",
+    quote: "The strategic insights and creative campaigns delivered by Outside the Suitbox helped us successfully enter three new markets. Their data-driven approach ensured optimal resource allocation and maximum impact.",
     author: "Sarah Williams",
     position: "VP of Brand Strategy",
     company: "Global Ventures Inc."
@@ -32,7 +32,7 @@ const testimonials: TestimonialProps[] = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const titleRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
   const testimonialRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -49,10 +49,8 @@ const Testimonials = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.target === titleRef.current) {
-              entry.target.classList.add('after:w-24');
-              entry.target.classList.remove('after:w-0');
-            }
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
           }
         });
       },
@@ -81,7 +79,7 @@ const Testimonials = () => {
     // Auto-play functionality
     autoPlayRef.current = setTimeout(() => {
       nextTestimonial();
-    }, 6000);
+    }, 8000);
 
     return () => {
       if (autoPlayRef.current) {
@@ -91,30 +89,34 @@ const Testimonials = () => {
   }, [currentIndex]);
 
   return (
-    <section id="testimonials" className="section-padding bg-gradient-to-b from-richBlack to-richBlack-dark">
+    <section id="testimonials" className="section-padding bg-gradient-to-b from-richBlack to-richBlack-dark pt-28 pb-20" aria-label="Testimonials section">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h5 className="uppercase tracking-wider text-gold mb-4">Success Stories</h5>
-          <h2 
-            ref={titleRef}
-            className="heading-lg mb-6 relative inline-block after:content-[''] after:absolute after:h-1 after:bg-gold after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:transition-all after:duration-1000"
-          >
-            Client Testimonials
+        <div 
+          ref={titleRef}
+          className="text-left max-w-2xl mx-auto lg:mx-0 mb-16 px-6 md:px-0 opacity-0 translate-y-10 transition-all duration-700 ease-out"
+        >
+          <p className="uppercase tracking-widest text-gold mb-3 text-xs font-medium">Success Stories</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase">
+            Client Experiences
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
-            Hear from our partners about their experience working with Outside the Suitbox.
+          <div className="w-16 h-1 bg-gold mb-8"></div>
+          <p className="text-white/70">
+            The results of our partnerships speak with more authority than we ever could.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div ref={testimonialRef} className="glass-card gold-border p-10 mb-8 relative opacity-0">
-            <Quote className="absolute top-6 left-6 text-gold/20 h-16 w-16" />
+        <div className="max-w-4xl mx-auto px-6 md:px-0">
+          <div 
+            ref={testimonialRef}
+            className="glass-card gold-border p-10 lg:p-16 mb-12 relative opacity-0 animate-fade-in"
+          >
+            <Quote className="absolute top-8 left-8 text-gold/20 h-16 w-16" />
             <div className="relative z-10">
-              <p className="text-xl mb-8 leading-relaxed">{testimonials[currentIndex].quote}</p>
+              <p className="text-xl lg:text-2xl mb-8 leading-relaxed font-light">{testimonials[currentIndex].quote}</p>
               <div>
-                <h4 className="text-lg font-bold">{testimonials[currentIndex].author}</h4>
-                <p className="text-gold">{testimonials[currentIndex].position}</p>
-                <p className="text-white/60">{testimonials[currentIndex].company}</p>
+                <h4 className="text-lg font-bold uppercase tracking-wide">{testimonials[currentIndex].author}</h4>
+                <p className="text-gold text-sm uppercase tracking-wider">{testimonials[currentIndex].position}</p>
+                <p className="text-white/60 text-sm">{testimonials[currentIndex].company}</p>
               </div>
             </div>
           </div>
@@ -122,10 +124,10 @@ const Testimonials = () => {
           <div className="flex justify-center items-center space-x-6">
             <button
               onClick={prevTestimonial}
-              className="p-3 rounded-full border border-gold/30 text-gold hover:bg-gold/10 transition-colors duration-300"
+              className="p-3 rounded-full border border-gold/30 text-gold hover:bg-gold/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold/50"
               aria-label="Previous testimonial"
             >
-              <ArrowLeft size={20} />
+              <ArrowLeft size={18} />
             </button>
 
             <div className="flex space-x-2">
@@ -133,20 +135,21 @@ const Testimonials = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-gold w-8' : 'bg-white/30'
+                  className={`h-1 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-gold w-12' : 'bg-white/30 w-4'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
+                  aria-current={index === currentIndex ? 'true' : 'false'}
                 />
               ))}
             </div>
 
             <button
               onClick={nextTestimonial}
-              className="p-3 rounded-full border border-gold/30 text-gold hover:bg-gold/10 transition-colors duration-300"
+              className="p-3 rounded-full border border-gold/30 text-gold hover:bg-gold/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold/50"
               aria-label="Next testimonial"
             >
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </button>
           </div>
         </div>

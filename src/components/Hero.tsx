@@ -1,41 +1,81 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Hero = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (titleRef.current) observer.observe(titleRef.current);
+    if (textRef.current) observer.observe(textRef.current);
+    if (buttonRef.current) observer.observe(buttonRef.current);
+
+    return () => {
+      if (titleRef.current) observer.unobserve(titleRef.current);
+      if (textRef.current) observer.unobserve(textRef.current);
+      if (buttonRef.current) observer.unobserve(buttonRef.current);
+    };
+  }, []);
+
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
+      {/* Background image with optimized loading */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-richBlack-dark/70 z-10"></div>
+        <div className="absolute inset-0 bg-richBlack-dark/60 z-10"></div>
         <img 
           src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" 
-          alt="Elegant background"
+          alt=""
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+          aria-hidden="true"
         />
       </div>
       
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-20 text-center py-20 md:text-left">
-        <div className="max-w-3xl mx-auto md:mx-0">
-          <h1 className="heading-xl mb-6 text-white font-display">
-            BREAKING THE FRAME. <br />
+      <div className="container mx-auto px-6 relative z-20 py-20 md:py-0 md:text-left">
+        <div className="max-w-2xl mx-auto md:mx-0 md:ml-12 lg:ml-24">
+          <h1 
+            ref={titleRef}
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+          >
+            BREAKING <br className="hidden md:block" />
+            THE FRAME. <br className="hidden md:block" />
             <span className="gold-text shimmer-effect">REDEFINING SUCCESS.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl">
-            Luxury meets disruption. We engineer sophisticated brand experiences 
-            that outperform, outclass, and outlast the competition.
+          <p 
+            ref={textRef}
+            className="text-lg md:text-xl text-white/80 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
+          >
+            We help you make strategic and creative leaps that will drive change inside and outside your business. Not just disruption, but meaningful transformation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-start">
-            <a href="#services" className="btn-gold">ELEVATE YOUR BRAND</a>
-            <a href="#contact" className="btn-outline">CONSULT WITH US</a>
+          <div 
+            ref={buttonRef}
+            className="flex flex-col sm:flex-row gap-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+          >
+            <a href="#services" className="btn-gold text-xs tracking-widest">ELEVATE YOUR BRAND</a>
+            <a href="#contact" className="btn-outline text-xs tracking-widest">CONSULT WITH US</a>
           </div>
         </div>
       </div>
       
-      {/* Gold frame overlay */}
-      <div className="absolute inset-0 pointer-events-none z-10 border-[20px] border-gold/20 m-8 sm:m-12 md:m-16 lg:m-20"></div>
+      {/* Frame aesthetic */}
+      <div className="absolute inset-0 pointer-events-none z-10 border-[12px] border-gold/10 m-8 sm:m-12 md:m-16 lg:m-20"></div>
     </section>
   );
 };
