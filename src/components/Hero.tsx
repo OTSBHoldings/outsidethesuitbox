@@ -34,7 +34,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* Background image with optimized loading */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-richBlack-dark/60 z-10"></div>
+        <div className="absolute inset-0 bg-richBlack-dark/70 z-10"></div>
         <img 
           src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" 
           alt=""

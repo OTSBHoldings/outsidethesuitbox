@@ -20,14 +20,41 @@ const Index = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || img.src;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
             imageObserver.unobserve(img);
           }
         });
+      }, {
+        rootMargin: '200px 0px', // Start loading images when they're within 200px of the viewport
+        threshold: 0.01
       });
 
       lazyImages.forEach((img) => imageObserver.observe(img));
+    } else {
+      // Fallback for browsers that don't support IntersectionObserver
+      lazyImages.forEach((img: HTMLImageElement) => {
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+      });
     }
+    
+    // Preconnect to important domains
+    const preconnectLinks = [
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    preconnectLinks.forEach(link => {
+      const linkEl = document.createElement('link');
+      linkEl.rel = link.rel;
+      linkEl.href = link.href;
+      if (link.crossOrigin) linkEl.crossOrigin = link.crossOrigin;
+      document.head.appendChild(linkEl);
+    });
   }, []);
 
   return (
@@ -46,6 +73,9 @@ const Index = () => {
         <meta name="twitter:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
         <meta name="twitter:image" content="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" />
         <link rel="canonical" href="https://raggededge.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta name="theme-color" content="#0A0A0A" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </Helmet>
       <div className="min-h-screen bg-richBlack overflow-x-hidden">
         <Navbar />

@@ -36,11 +36,27 @@
   html {
     scroll-behavior: smooth;
     @apply antialiased;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     @apply bg-richBlack text-white font-sans;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Optimize scrolling performance */
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Improve tap highlight on mobile */
+  a, button {
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {
@@ -63,6 +79,7 @@
 
   .glass-card {
     @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-md;
+    will-change: transform, opacity;
   }
 
   .gold-border {
@@ -95,10 +112,11 @@
 
   .shimmer-effect {
     @apply bg-gold-shimmer bg-[length:200%_100%] animate-shimmer;
+    will-change: background-position;
   }
 }
 
-/* Custom animations */
+/* Optimized animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -117,8 +135,18 @@
 
 .animate-float {
   animation: float 5s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-fade-in {
   animation: fadeInBottom 0.7s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+/* Content visibility optimizations for below-the-fold sections */
+@media screen and (min-width: 1024px) {
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px; /* Placeholder size */
+  }
 }
