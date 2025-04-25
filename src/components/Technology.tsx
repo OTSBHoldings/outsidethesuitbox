@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionAnimation } from '../hooks/useIntersectionAnimation';
@@ -33,15 +32,15 @@ const Technology = () => {
           </div>
           <div className="order-1 md:order-2">
             <h2 ref={titleRef} className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase opacity-0 translate-y-10 transition-all duration-700 ease-out">
-              WHERE <span className="gold-text">STRATEGY</span><br />MEETS EXECUTION
+              WHERE <span className="gold-text">VISION</span><br />MEETS VELOCITY
             </h2>
             <div className="w-16 h-1 bg-gold mb-8"></div>
             <div ref={contentRef} className="opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200">
               <p className="text-white/80 mb-8 text-lg">
-                We're not interested in vanity metrics or industry awards. We measure success in revenue, growth, and market dominance.
+                Forget industry awards and vanity metrics. In our world, success is measured in revenue growth, market share, and the ability to command premium pricing.
               </p>
               <p className="text-white/80 mb-8 text-lg">
-                Our holding structure allows us to deploy capital, expertise, and resources across our brand portfolio with maximum efficiency.
+                Our unique holding structure lets us move fast, deploy capital strategically, and scale winners aggressively. When we spot an opportunity, we strike with precision.
               </p>
               <Link to="/services" className="btn-gold inline-block text-xs tracking-widest">
                 OUR SERVICES

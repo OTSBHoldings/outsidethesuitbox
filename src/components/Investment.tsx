@@ -19,18 +19,18 @@ const Investment = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 ref={titleRef} className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase opacity-0 translate-y-10 transition-all duration-700 ease-out">
-              BE THE BRAND THAT<br /><span className="gold-text">OWNS THE MARKET</span>
+              STOP FOLLOWING.<br /><span className="gold-text">START LEADING.</span>
             </h2>
             <div className="w-16 h-1 bg-gold mb-8"></div>
             <div ref={contentRef} className="opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200">
               <p className="text-white/80 mb-8 text-lg">
-                Most businesses play at the edges. They tinker with logos and websites while their competitors take decisive action and capture market share.
+                Your competitors are playing it safe - tweaking logos, updating websites, and wondering why they're still stuck in the same spot. Meanwhile, market leaders are making bold moves and capturing massive market share.
               </p>
               <p className="text-white/80 mb-8 text-lg">
-                Our portfolio companies command attention, drive conversations, and dominate their industries through strategic brand positioning and ruthless execution.
+                Our portfolio companies don't just participate in their markets - they define them. Through strategic positioning and relentless execution, we turn good brands into category kings.
               </p>
               <Link to="/investments" className="btn-gold inline-block text-xs tracking-widest">
-                INVESTMENT CRITERIA
+                INVESTMENT STRATEGY
               </Link>
             </div>
           </div>

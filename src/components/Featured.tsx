@@ -18,18 +18,18 @@ const Featured = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 ref={titleRef} className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase opacity-0 translate-y-10 transition-all duration-700 ease-out">
-              BREAK THE <span className="gold-text">CONVENTIONAL</span>
+              STOP PLAYING <span className="gold-text">SMALL</span>
             </h2>
             <div className="w-16 h-1 bg-gold mb-8"></div>
             <div ref={contentRef} className="opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200">
               <p className="text-white/80 mb-8 text-lg">
-                Most marketing is a waste of money. Most agencies sell you what's easy, not what works. Most brands fade into mediocrity because they're too afraid to stand out.
+                Let's be honest - 95% of marketing is a complete waste of money. Most agencies sell you what's easy, not what drives growth. And most brands? They're too scared to make the bold moves that actually move the needle.
               </p>
               <p className="text-white/80 mb-8 text-lg">
-                We're not most companies. We acquire, transform, and scale brands with a ruthless focus on measurable results.
+                We're different. We buy brands with potential, transform them through strategic positioning, and scale them into market leaders. No vanity metrics. Just pure, profitable growth.
               </p>
               <Link to="/about" className="btn-gold inline-block text-xs tracking-widest">
-                OUR APPROACH
+                OUR PLAYBOOK
               </Link>
             </div>
           </div>

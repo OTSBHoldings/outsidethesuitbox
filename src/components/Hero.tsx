@@ -29,28 +29,27 @@ const Hero = () => {
         />
       </div>
       
-      {/* Content */}
       <div className="container mx-auto px-6 relative z-20 pt-20 md:pt-0">
         <div className="max-w-3xl mx-auto md:mx-0 md:ml-12 lg:ml-24">
           <div className="mb-8 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
             ref={subtitleRef}>
-            Strategic Brand Investment
+            Disrupt. Scale. Dominate.
           </div>
           
           <h1 
             ref={titleRef}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
           >
-            <span className="block">WE DON'T BUILD</span>
-            <span className="block">BRANDS.</span>
-            <span className="gold-text shimmer-effect">WE BUILD EMPIRES.</span>
+            <span className="block">YOU DON'T NEED</span>
+            <span className="block">ANOTHER AGENCY.</span>
+            <span className="gold-text shimmer-effect">YOU NEED AN EMPIRE.</span>
           </h1>
           
           <p 
             ref={subtitleRef}
             className="text-lg md:text-xl text-white/80 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
           >
-            Outside the Suitbox acquires, transforms, and scales brands with relentless focus on ROI. Because in a world of marketing fluff, we only care about what works.
+            We're not here to play small. We acquire and transform brands into market leaders through ruthless execution and strategic positioning. No fluff. No BS. Just results that speak for themselves.
           </p>
           
           <div 
@@ -58,10 +57,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
           >
             <Link to="/portfolio" className="btn-gold group text-xs tracking-widest flex items-center justify-center">
-              VIEW OUR PORTFOLIO
+              SEE THE PROOF
               <ArrowRight className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/investments" className="btn-outline text-xs tracking-widest">INVESTMENT STRATEGY</Link>
+            <Link to="/investments" className="btn-outline text-xs tracking-widest">HOW WE INVEST</Link>
           </div>
         </div>
       </div>

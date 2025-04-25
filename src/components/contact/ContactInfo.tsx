@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { MapPin, Phone, Mail, Zap } from 'lucide-react';
 import { useIntersectionAnimation } from '../../hooks/useIntersectionAnimation';
@@ -10,23 +9,23 @@ const ContactInfo = () => {
   const contactItems = [
     {
       icon: <MapPin className="text-gold h-5 w-5" />,
-      title: "Find Us",
+      title: "Our HQ",
       details: ["123 Bold Avenue", "London, UK EC1A 1BB"]
     },
     {
       icon: <Phone className="text-gold h-5 w-5" />,
-      title: "Call Us",
-      details: ["+44 (0) 20 1234 5678", "Monday - Friday, 9am - 6pm"]
+      title: "Let's Talk",
+      details: ["+44 (0) 20 1234 5678", "Direct line to decision makers"]
     },
     {
       icon: <Mail className="text-gold h-5 w-5" />,
-      title: "Email Us",
-      details: ["hello@outsidethesuitbox.com", "proposals@outsidethesuitbox.com"]
+      title: "Email Direct",
+      details: ["deals@outsidethesuitbox.com", "partnerships@outsidethesuitbox.com"]
     },
     {
       icon: <Zap className="text-gold h-5 w-5" />,
-      title: "Follow Us",
-      details: ["@outsidethesuitbox", "#LeavetheSuitBehind"]
+      title: "Social Impact",
+      details: ["@disruptthebox", "#BreakTheBox"]
     }
   ];
 
@@ -59,4 +58,3 @@ const ContactInfo = () => {
 };
 
 export default ContactInfo;
-
