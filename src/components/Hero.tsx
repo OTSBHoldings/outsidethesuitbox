@@ -15,23 +15,25 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative min-h-[120vh] overflow-hidden pt-20 md:pt-32" 
+      className="relative min-h-[100vh] overflow-hidden pt-16 md:pt-24" 
       aria-label="Hero section"
     >
-      {/* Main background image */}
+      {/* Main background image with higher quality */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
         <img 
           src="/lovable-uploads/a6e990aa-17ce-415a-962a-88adb94aa003.png" 
           alt="Elegant suit with gold frame"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
       
       {/* Main content layout */}
-      <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(120vh-80px)] px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center h-full max-w-[1400px] mx-auto text-center">
-          <div className="w-full max-w-4xl mt-16 md:mt-20">
+      <div className="container mx-auto relative z-20 flex flex-col min-h-screen px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center flex-grow max-w-[1400px] mx-auto text-center">
+          <div className="w-full max-w-4xl">
             <div 
               className="mb-4 md:mb-6 text-gold text-xs uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
               ref={subtitleRef}
@@ -57,7 +59,7 @@ const Hero = () => {
             
             <div 
               ref={buttonRef}
-              className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 mt-8 md:mt-20 mb-40 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+              className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 mt-4 md:mt-8 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500 mb-16 md:mb-24"
             >
               <Link 
                 to="/portfolio" 
@@ -77,14 +79,14 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Decorative border - adjusted for mobile */}
+      {/* Decorative border */}
       <div className="absolute inset-0 pointer-events-none z-10 border-[8px] md:border-[12px] border-gold/10 m-4 sm:m-8 md:m-16 lg:m-20"></div>
       
-      {/* Gold line positioned below buttons with more space on mobile */}
-      <div className="absolute bottom-20 md:bottom-24 left-0 right-0 h-px bg-gold/30 z-20"></div>
+      {/* Gold line positioned below buttons */}
+      <div className="absolute bottom-12 md:bottom-16 left-0 right-0 h-px bg-gold/30 z-20"></div>
       
-      {/* Scroll indicator with improved mobile spacing */}
-      <div className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
+      {/* Scroll indicator */}
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
         <span className="text-white text-[10px] md:text-xs tracking-widest mb-2">SCROLL</span>
         <div className="w-[1px] h-8 md:h-12 bg-white/60 animate-pulse"></div>
       </div>
