@@ -20,43 +20,23 @@ const Hero = () => {
       className="relative min-h-screen overflow-hidden pt-24 md:pt-32" 
       aria-label="Hero section"
     >
-      {/* Background image grid */}
-      <div className="absolute inset-0 z-0 grid grid-cols-2 gap-4 p-4">
-        <div className="relative h-full">
-          <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
-          <img 
-            src="/lovable-uploads/e5d7b0cc-6cad-468f-845b-2c561f3c8a7b.png" 
-            alt="Professional suit display"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-        <div className="grid grid-rows-2 gap-4 h-full">
-          <div className="relative">
-            <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
-            <img 
-              src="/lovable-uploads/2f2abc40-e2f2-45a2-ae52-594ad6a66d35.png" 
-              alt="Laptop with brand logo"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
-            <img 
-              src="/lovable-uploads/aaf800ad-715f-45e4-a70c-104a38a8420a.png" 
-              alt="Elegant suit with gold frame"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-        </div>
+      {/* Main background image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-richBlack-dark/80 z-10"></div>
+        <img 
+          src="/lovable-uploads/a6e990aa-17ce-415a-962a-88adb94aa003.png" 
+          alt="Elegant suit with gold frame"
+          className="w-full h-full object-cover"
+        />
       </div>
       
-      {/* Main content layout with two columns */}
+      {/* Main content layout */}
       <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(100vh-120px)] pt-10 md:pt-0">
         <div className="flex flex-col md:flex-row h-full items-center">
           {/* Left column with logo */}
           <div 
             ref={logoRef} 
-            className="w-full md:w-1/2 flex justify-center md:justify-end items-center mb-12 md:mb-0 px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out backdrop-blur-sm bg-richBlack-dark/50 rounded-xl p-8"
+            className="w-full md:w-1/2 flex justify-center md:justify-start items-center mb-12 md:mb-0 px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
           >
             <div className="max-w-md">
               <Logo size="lg" className="mx-auto md:mx-0" />
@@ -66,7 +46,7 @@ const Hero = () => {
           
           {/* Right column with text content */}
           <div className="w-full md:w-1/2 px-6 md:px-10 flex flex-col justify-center">
-            <div className="backdrop-blur-sm bg-richBlack-dark/50 rounded-xl p-8">
+            <div className="backdrop-blur-sm bg-richBlack-dark/30 rounded-xl p-8 border border-gold/10">
               <div className="mb-8 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
                 ref={subtitleRef}>
                 Disrupt. Scale. Dominate.
@@ -74,16 +54,16 @@ const Hero = () => {
               
               <h1 
                 ref={titleRef}
-                className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+                className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out leading-tight"
               >
                 <span className="block">YOU DON'T NEED</span>
                 <span className="block">ANOTHER AGENCY.</span>
-                <span className="gold-text shimmer-effect">YOU NEED AN EMPIRE.</span>
+                <span className="gold-text shimmer-effect text-5xl md:text-7xl lg:text-8xl">YOU NEED AN EMPIRE.</span>
               </h1>
               
               <p 
                 ref={subtitleRef}
-                className="text-lg md:text-xl text-white/80 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
+                className="text-lg md:text-xl text-white/90 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
               >
                 We're not here to play small. We acquire and transform brands into market leaders through ruthless execution and strategic positioning. No fluff. No BS. Just results that speak for themselves.
               </p>
@@ -103,7 +83,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Decorative elements */}
+      {/* Decorative border */}
       <div className="absolute inset-0 pointer-events-none z-10 border-[12px] border-gold/10 m-8 sm:m-12 md:m-16 lg:m-20"></div>
       
       {/* Scroll indicator */}
