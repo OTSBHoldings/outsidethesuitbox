@@ -24,13 +24,13 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-richBlack/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center" aria-label="Outside the Suitbox home">
+        <Link to="/" className="flex items-center space-x-4" aria-label="Outside the Suitbox home">
           <Logo size="sm" />
+          <span className="text-white text-xs uppercase tracking-widest hidden md:block">Outside the Suitbox</span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="nav-link text-xs uppercase tracking-widest">Outside the Suitbox</Link>
           <Link to="/services" className="nav-link text-xs uppercase tracking-widest">Services</Link>
           <Link to="/about" className="nav-link text-xs uppercase tracking-widest">About</Link>
           <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest">Portfolio</Link>
@@ -51,7 +51,6 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-full left-0 right-0 bg-richBlack/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="container mx-auto px-6 py-6 flex flex-col space-y-6">
-          <Link to="/" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Outside the Suitbox</Link>
           <Link to="/services" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/about" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</Link>
