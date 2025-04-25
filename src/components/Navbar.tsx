@@ -60,51 +60,53 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       <div 
-        className={`md:hidden fixed inset-0 bg-richBlack/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
-        } z-40`}
+        className={`fixed inset-x-0 top-[60px] bg-richBlack/95 backdrop-blur-md transform transition-all duration-300 ease-in-out shadow-lg md:hidden ${
+          isMobileMenuOpen 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
       >
-        <div className="container mx-auto px-6 py-20 flex flex-col space-y-6">
+        <div className="px-4 py-4 space-y-2 border-t border-white/10">
           <Link 
             to="/services" 
-            className="nav-link text-2xl font-display uppercase tracking-widest w-full text-center" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Services
           </Link>
           <Link 
             to="/about" 
-            className="nav-link text-2xl font-display uppercase tracking-widest w-full text-center" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             to="/team" 
-            className="nav-link text-2xl font-display uppercase tracking-widest w-full text-center" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Team
           </Link>
           <Link 
             to="/portfolio" 
-            className="nav-link text-2xl font-display uppercase tracking-widest w-full text-center" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Portfolio
           </Link>
           <Link 
             to="/investments" 
-            className="nav-link text-2xl font-display uppercase tracking-widest w-full text-center" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Investments
           </Link>
           <Link 
             to="/contact" 
-            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-8 py-3 rounded-sm text-xl uppercase tracking-widest w-fit mx-auto mt-8 nav-contact-shimmer"
+            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm text-sm uppercase tracking-widest block w-full text-center mt-4 nav-contact-shimmer"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
