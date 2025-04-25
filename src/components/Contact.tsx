@@ -13,7 +13,7 @@ const Contact = () => {
   });
 
   return (
-    <section id="contact" className="section-padding bg-richBlack-light pt-28 pb-28" aria-label="Contact section">
+    <section id="contact" className="section-padding bg-richBlack pt-28 pb-28" aria-label="Contact section">
       <div className="container mx-auto">
         <ContactHeader />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 px-6 md:px-0">
@@ -23,6 +23,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      {/* Full-width gold accent bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-2 bg-gold opacity-50"></div>
     </section>
   );
 };

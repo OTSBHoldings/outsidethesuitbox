@@ -33,9 +33,15 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/services" className="nav-link text-xs uppercase tracking-widest">Services</Link>
           <Link to="/about" className="nav-link text-xs uppercase tracking-widest">About</Link>
+          <Link to="/team" className="nav-link text-xs uppercase tracking-widest">Team</Link>
           <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest">Portfolio</Link>
           <Link to="/investments" className="nav-link text-xs uppercase tracking-widest">Investments</Link>
-          <Link to="/contact" className="nav-link text-xs uppercase tracking-widest">Contact</Link>
+          <Link 
+            to="/contact" 
+            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 shimmer-effect"
+          >
+            Contact
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -53,9 +59,10 @@ const Navbar = () => {
         <div className="container mx-auto px-6 py-6 flex flex-col space-y-6">
           <Link to="/services" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/about" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+          <Link to="/team" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Team</Link>
           <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</Link>
           <Link to="/investments" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Investments</Link>
-          <Link to="/contact" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link to="/contact" className="bg-gold text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest w-fit shimmer-effect" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>
