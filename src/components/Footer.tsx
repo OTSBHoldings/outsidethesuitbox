@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -28,7 +29,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-xl font-display font-bold uppercase gold-text mb-6">Outside the Suitbox</h3>
             <p className="text-white/70 mb-6 text-sm">
-              Redefining excellence in strategic brand development.
+              Strategic brand acquisition and transformation. Building valuable brands that dominate markets.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white/60 hover:text-gold transition-colors duration-300" aria-label="Facebook">
@@ -49,33 +50,34 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Navigate</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#services" className="text-white/60 hover:text-gold transition-colors duration-300">Services</a></li>
-              <li><a href="#about" className="text-white/60 hover:text-gold transition-colors duration-300">About</a></li>
-              <li><a href="#testimonials" className="text-white/60 hover:text-gold transition-colors duration-300">Results</a></li>
-              <li><a href="#team" className="text-white/60 hover:text-gold transition-colors duration-300">Team</a></li>
-              <li><a href="#contact" className="text-white/60 hover:text-gold transition-colors duration-300">Contact</a></li>
+              <li><Link to="/" className="text-white/60 hover:text-gold transition-colors duration-300">Home</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Services</Link></li>
+              <li><Link to="/about" className="text-white/60 hover:text-gold transition-colors duration-300">About</Link></li>
+              <li><Link to="/portfolio" className="text-white/60 hover:text-gold transition-colors duration-300">Portfolio</Link></li>
+              <li><Link to="/investments" className="text-white/60 hover:text-gold transition-colors duration-300">Investments</Link></li>
+              <li><Link to="/contact" className="text-white/60 hover:text-gold transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Elevation</a></li>
-              <li><a href="#" className="text-white/60 hover:text-gold transition-colors duration-300">Digital Campaigns</a></li>
-              <li><a href="#" className="text-white/60 hover:text-gold transition-colors duration-300">Visual Identity</a></li>
-              <li><a href="#" className="text-white/60 hover:text-gold transition-colors duration-300">Performance Optimization</a></li>
-              <li><a href="#" className="text-white/60 hover:text-gold transition-colors duration-300">Global Extension</a></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Acquisition</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Transformation</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Strategic Growth</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Performance Marketing</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Market Expansion</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Contact</h4>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li>123 Innovation Way</li>
-              <li>San Francisco, CA 94105</li>
-              <li>+1 (555) 123-4567</li>
-              <li>inquiries@outsidethesuitbox.com</li>
-              <li>Mon-Fri: 9AM - 6PM PST</li>
+              <li>Global Headquarters</li>
+              <li>123 Madison Avenue, Suite 500</li>
+              <li>New York, NY 10016</li>
+              <li>+1 (212) 555-8765</li>
+              <li>info@outsidethesuitbox.com</li>
             </ul>
           </div>
         </div>
@@ -83,7 +85,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8 text-center text-white/40">
           <p className="uppercase text-xs tracking-wider">© {new Date().getFullYear()} Outside the Suitbox. All rights reserved.</p>
           <p className="text-xs mt-2">
-            <a href="#" className="hover:text-gold transition-colors duration-300">Privacy Policy</a> | <a href="#" className="hover:text-gold transition-colors duration-300">Terms of Service</a>
+            <Link to="#" className="hover:text-gold transition-colors duration-300">Privacy Policy</Link> | <Link to="#" className="hover:text-gold transition-colors duration-300">Terms of Service</Link>
           </p>
         </div>
       </div>

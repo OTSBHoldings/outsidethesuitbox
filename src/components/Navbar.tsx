@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navbar = () => {
@@ -23,18 +24,18 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-richBlack/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex items-center" aria-label="Outside the Suitbox home">
+        <Link to="/" className="flex items-center" aria-label="Outside the Suitbox home">
           <Logo size="sm" />
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#" className="nav-link text-xs uppercase tracking-widest">Outside the Suitbox</a>
-          <a href="#services" className="nav-link text-xs uppercase tracking-widest">Services</a>
-          <a href="#about" className="nav-link text-xs uppercase tracking-widest">About</a>
-          <a href="#testimonials" className="nav-link text-xs uppercase tracking-widest">Results</a>
-          <a href="#team" className="nav-link text-xs uppercase tracking-widest">Team</a>
-          <a href="#contact" className="nav-link text-xs uppercase tracking-widest">Contact</a>
+          <Link to="/" className="nav-link text-xs uppercase tracking-widest">Outside the Suitbox</Link>
+          <Link to="/services" className="nav-link text-xs uppercase tracking-widest">Services</Link>
+          <Link to="/about" className="nav-link text-xs uppercase tracking-widest">About</Link>
+          <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest">Portfolio</Link>
+          <Link to="/investments" className="nav-link text-xs uppercase tracking-widest">Investments</Link>
+          <Link to="/contact" className="nav-link text-xs uppercase tracking-widest">Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -50,12 +51,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-full left-0 right-0 bg-richBlack/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="container mx-auto px-6 py-6 flex flex-col space-y-6">
-          <a href="#" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Outside the Suitbox</a>
-          <a href="#services" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-          <a href="#about" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-          <a href="#testimonials" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Results</a>
-          <a href="#team" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Team</a>
-          <a href="#contact" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+          <Link to="/" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Outside the Suitbox</Link>
+          <Link to="/services" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link to="/about" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+          <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</Link>
+          <Link to="/investments" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Investments</Link>
+          <Link to="/contact" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>

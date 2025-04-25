@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -37,7 +38,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-richBlack-dark/70 z-10"></div>
         <img 
-          src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" 
+          src="/lovable-uploads/d60a241c-168b-45ea-a47e-2cfe6820cb82.png" 
           alt="Bold branding concept visualization"
           className="w-full h-full object-cover"
           loading="eager"
@@ -50,34 +51,34 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto md:mx-0 md:ml-12 lg:ml-24">
           <div className="mb-8 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
             ref={subtitleRef}>
-            Branding for the Bold
+            Strategic Brand Investment
           </div>
           
           <h1 
             ref={titleRef}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
           >
-            <span className="block">LOVABLE:</span>
-            <span className="block">LEAVE THE</span>
-            <span className="gold-text shimmer-effect">SUIT BEHIND.</span>
+            <span className="block">WE DON'T BUILD</span>
+            <span className="block">BRANDS.</span>
+            <span className="gold-text shimmer-effect">WE BUILD EMPIRES.</span>
           </h1>
           
           <p 
             ref={subtitleRef}
             className="text-lg md:text-xl text-white/80 mb-10 max-w-xl opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
           >
-            Outside the Suitbox partners with Lovable to challenge conventions, champion brave ideas, and create brands that resonate.
+            Outside the Suitbox acquires, transforms, and scales brands with relentless focus on ROI. Because in a world of marketing fluff, we only care about what works.
           </p>
           
           <div 
             ref={buttonRef}
             className="flex flex-col sm:flex-row gap-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
           >
-            <a href="#partnership" className="btn-gold group text-xs tracking-widest flex items-center justify-center">
-              READY TO BE LOVABLE?
+            <Link to="/portfolio" className="btn-gold group text-xs tracking-widest flex items-center justify-center">
+              VIEW OUR PORTFOLIO
               <ArrowRight className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="#services" className="btn-outline text-xs tracking-widest">EXPLORE OUR SERVICES</a>
+            </Link>
+            <Link to="/investments" className="btn-outline text-xs tracking-widest">INVESTMENT STRATEGY</Link>
           </div>
         </div>
       </div>
