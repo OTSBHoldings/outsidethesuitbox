@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,7 +37,7 @@ const Navbar = () => {
           <Link to="/investments" className="nav-link text-xs uppercase tracking-widest">Investments</Link>
           <Link 
             to="/contact" 
-            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 shimmer-effect"
+            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 bg-gradient-to-r from-gold via-gold-light to-gold bg-[length:200%_100%] animate-[shimmer_8s_linear_infinite]"
           >
             Contact
           </Link>
