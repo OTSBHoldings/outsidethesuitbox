@@ -1,35 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useIntersectionAnimation } from '../hooks/useIntersectionAnimation';
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (titleRef.current) observer.observe(titleRef.current);
-    if (subtitleRef.current) observer.observe(subtitleRef.current);
-    if (buttonRef.current) observer.observe(buttonRef.current);
-
-    return () => {
-      if (titleRef.current) observer.unobserve(titleRef.current);
-      if (subtitleRef.current) observer.unobserve(subtitleRef.current);
-      if (buttonRef.current) observer.unobserve(buttonRef.current);
-    };
-  }, []);
+  useIntersectionAnimation({
+    refs: [titleRef, subtitleRef, buttonRef],
+  });
 
   return (
     <section 
