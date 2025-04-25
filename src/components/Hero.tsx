@@ -9,10 +9,9 @@ const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
 
   useIntersectionAnimation({
-    refs: [titleRef, subtitleRef, buttonRef, logoRef],
+    refs: [titleRef, subtitleRef, buttonRef],
   });
 
   return (
@@ -32,20 +31,9 @@ const Hero = () => {
       
       {/* Main content layout */}
       <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(100vh-120px)] pt-10 md:pt-0">
-        <div className="flex flex-col md:flex-row h-full items-center">
-          {/* Left column with logo */}
-          <div 
-            ref={logoRef} 
-            className="w-full md:w-1/2 flex justify-center md:justify-start items-center mb-12 md:mb-0 px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
-          >
-            <div className="max-w-md">
-              <Logo size="lg" className="mx-auto md:mx-0" />
-              <div className="mt-6 border-2 border-gold/30 w-3/4 mx-auto md:mx-0"></div>
-            </div>
-          </div>
-          
+        <div className="flex flex-col md:flex-row h-full items-center justify-center">
           {/* Right column with text content */}
-          <div className="w-full md:w-1/2 px-6 md:px-10 flex flex-col justify-center">
+          <div className="w-full md:w-2/3 px-6 md:px-10 flex flex-col justify-center">
             <div className="backdrop-blur-sm bg-richBlack-dark/30 rounded-xl p-8 border border-gold/10">
               <div className="mb-8 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
                 ref={subtitleRef}>
