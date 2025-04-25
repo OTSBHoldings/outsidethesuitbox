@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,7 +14,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative min-h-screen overflow-hidden pt-24 md:pt-32" 
+      className="relative min-h-[120vh] overflow-hidden pt-32 md:pt-40" 
       aria-label="Hero section"
     >
       {/* Main background image */}
@@ -29,9 +28,9 @@ const Hero = () => {
       </div>
       
       {/* Main content layout */}
-      <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(100vh-120px)] pt-10 md:pt-0">
+      <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(120vh-120px)] pt-20 md:pt-10">
         <div className="flex flex-col items-start justify-center h-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-4xl mt-20">
             <div 
               className="mb-6 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
               ref={subtitleRef}
@@ -57,7 +56,7 @@ const Hero = () => {
             
             <div 
               ref={buttonRef}
-              className="flex flex-col sm:flex-row gap-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+              className="flex flex-col sm:flex-row gap-6 mt-20 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
             >
               <Link to="/portfolio" className="btn-gold group text-sm tracking-widest flex items-center justify-center px-10 py-3">
                 SEE THE PROOF
@@ -73,7 +72,7 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none z-10 border-[12px] border-gold/10 m-8 sm:m-12 md:m-16 lg:m-20"></div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
         <span className="text-white text-xs tracking-widest mb-2">SCROLL</span>
         <div className="w-[1px] h-12 bg-white/60 animate-pulse"></div>
       </div>
