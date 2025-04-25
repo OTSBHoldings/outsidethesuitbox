@@ -57,7 +57,7 @@ const Hero = () => {
             
             <div 
               ref={buttonRef}
-              className="flex flex-col sm:flex-row justify-center gap-6 mt-20 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+              className="flex flex-col sm:flex-row justify-center gap-6 mt-20 mb-24 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
             >
               <Link to="/portfolio" className="btn-gold group text-sm tracking-widest flex items-center justify-center px-10 py-3">
                 SEE THE PROOF
@@ -72,11 +72,11 @@ const Hero = () => {
       {/* Decorative border */}
       <div className="absolute inset-0 pointer-events-none z-10 border-[12px] border-gold/10 m-8 sm:m-12 md:m-16 lg:m-20"></div>
       
-      {/* Moved gold line below the main content */}
-      <div className="absolute bottom-48 left-0 right-0 h-px bg-gold/30 z-20"></div>
+      {/* Gold line now positioned well below the buttons */}
+      <div className="absolute bottom-32 left-0 right-0 h-px bg-gold/30 z-20"></div>
       
-      {/* Scroll indicator moved below the gold line */}
-      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
+      {/* Scroll indicator moved further below the gold line */}
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
         <span className="text-white text-xs tracking-widest mb-2">SCROLL</span>
         <div className="w-[1px] h-12 bg-white/60 animate-pulse"></div>
       </div>

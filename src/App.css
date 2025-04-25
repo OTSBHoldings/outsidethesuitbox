@@ -82,7 +82,7 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Slower shimmer effect for navbar contact button */
+/* Much slower shimmer effect for navbar contact button */
 .nav-contact-shimmer {
   background: linear-gradient(
     90deg,
@@ -94,7 +94,7 @@
     #FEE101 100%
   );
   background-size: 200% auto;
-  animation: slow-shimmer 12s linear infinite;
+  animation: slow-shimmer 20s linear infinite; /* Slowed down from 12s to 20s */
 }
 
 @keyframes slow-shimmer {
