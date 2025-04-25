@@ -4,8 +4,9 @@ import { MapPin, Phone, Mail, Zap } from 'lucide-react';
 import { useIntersectionAnimation } from '../../hooks/useIntersectionAnimation';
 
 const ContactInfo = () => {
-  const infoItemsRef = useRef<(HTMLDivElement | null)[]>([]);
-
+  // Create an array of refs using Array.from
+  const infoItemsRef = useRef<Array<HTMLDivElement | null>>([]);
+  
   const contactItems = [
     {
       icon: <MapPin className="text-gold h-5 w-5" />,
@@ -30,7 +31,7 @@ const ContactInfo = () => {
   ];
 
   useIntersectionAnimation({
-    refs: infoItemsRef.current.filter((ref): ref is HTMLDivElement => ref !== null),
+    refs: infoItemsRef.current.filter((ref): ref is HTMLDivElement => ref !== null).map(ref => ({ current: ref })),
   });
 
   return (
@@ -58,3 +59,4 @@ const ContactInfo = () => {
 };
 
 export default ContactInfo;
+
