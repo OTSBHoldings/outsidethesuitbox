@@ -1,6 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Zap } from 'lucide-react';
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -56,7 +56,7 @@ const Contact = () => {
     
     // Simulate form submission
     setTimeout(() => {
-      toast.success("Message sent successfully! We'll get back to you soon.");
+      toast.success("Message sent! We'll be in touch to make your brand lovable.");
       setFormData({
         name: '',
         email: '',
@@ -77,11 +77,11 @@ const Contact = () => {
         >
           <p className="uppercase tracking-widest text-gold mb-3 text-xs font-medium">Get In Touch</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase">
-            Begin The Conversation
+            Let's Make Your Brand Lovable
           </h2>
           <div className="w-16 h-1 bg-gold mb-8"></div>
           <p className="text-white/70">
-            We selectively partner with brands positioned for extraordinary growth and committed to uncompromising excellence.
+            Ready to leave the suit behind and create something extraordinary? We selectively partner with brands positioned for bold growth and committed to brave thinking.
           </p>
         </div>
 
@@ -90,18 +90,23 @@ const Contact = () => {
             {[
               {
                 icon: <MapPin className="text-gold h-5 w-5" />,
-                title: "Headquarters",
-                details: ["123 Innovation Way", "San Francisco, CA 94105"]
+                title: "Find Us",
+                details: ["123 Bold Avenue", "London, UK EC1A 1BB"]
               },
               {
                 icon: <Phone className="text-gold h-5 w-5" />,
-                title: "Direct Inquiry",
-                details: ["+1 (555) 123-4567", "Hours: Mon-Fri, 9AM - 6PM PST"]
+                title: "Call Us",
+                details: ["+44 (0) 20 1234 5678", "Monday - Friday, 9am - 6pm"]
               },
               {
                 icon: <Mail className="text-gold h-5 w-5" />,
-                title: "Electronic Correspondence",
-                details: ["inquiries@outsidethesuitbox.com", "support@outsidethesuitbox.com"]
+                title: "Email Us",
+                details: ["hello@outsidethesuitbox.com", "proposals@outsidethesuitbox.com"]
+              },
+              {
+                icon: <Zap className="text-gold h-5 w-5" />,
+                title: "Follow Us",
+                details: ["@outsidethesuitbox", "#LeavetheSuitBehind"]
               }
             ].map((item, index) => (
               <div 
@@ -168,7 +173,7 @@ const Contact = () => {
               </div>
               
               <div className="mb-6">
-                <label htmlFor="subject" className="block mb-2 text-xs uppercase tracking-wide">Your Objective *</label>
+                <label htmlFor="subject" className="block mb-2 text-xs uppercase tracking-wide">What Are You Looking For? *</label>
                 <select
                   id="subject"
                   name="subject"
@@ -177,18 +182,18 @@ const Contact = () => {
                   className="w-full p-3 bg-transparent border border-white/20 rounded-sm focus:border-gold focus:ring-gold/50 focus:ring-1 focus:outline-none transition-colors"
                   required
                 >
-                  <option value="" className="bg-richBlack-dark">Select your objective</option>
-                  <option value="Brand Development" className="bg-richBlack-dark">Brand Development</option>
-                  <option value="Digital Marketing" className="bg-richBlack-dark">Digital Marketing</option>
-                  <option value="Creative Design" className="bg-richBlack-dark">Creative Design</option>
-                  <option value="Market Expansion" className="bg-richBlack-dark">Market Expansion</option>
-                  <option value="Performance Analysis" className="bg-richBlack-dark">Performance Analysis</option>
+                  <option value="" className="bg-richBlack-dark">Select an option</option>
+                  <option value="Brand Strategy" className="bg-richBlack-dark">Brand Strategy</option>
+                  <option value="Visual Identity" className="bg-richBlack-dark">Visual Identity</option>
+                  <option value="UX/UI Design" className="bg-richBlack-dark">UX/UI Design</option>
+                  <option value="Marketing Campaign" className="bg-richBlack-dark">Marketing Campaign</option>
+                  <option value="Full Rebrand" className="bg-richBlack-dark">Full Rebrand</option>
                   <option value="Other" className="bg-richBlack-dark">Other</option>
                 </select>
               </div>
               
               <div className="mb-8">
-                <label htmlFor="message" className="block mb-2 text-xs uppercase tracking-wide">Your Message</label>
+                <label htmlFor="message" className="block mb-2 text-xs uppercase tracking-wide">Tell Us About Your Project</label>
                 <textarea
                   id="message"
                   name="message"
@@ -196,6 +201,7 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={5}
                   className="w-full p-3 bg-transparent border border-white/20 rounded-sm focus:border-gold focus:ring-gold/50 focus:ring-1 focus:outline-none transition-colors"
+                  placeholder="The more we know, the better we can help..."
                 ></textarea>
               </div>
               
@@ -214,7 +220,7 @@ const Contact = () => {
                   </span>
                 ) : (
                   <span className="flex items-center">
-                    SUBMIT
+                    READY TO BE LOVABLE
                     <Send className="ml-2 h-4 w-4" />
                   </span>
                 )}

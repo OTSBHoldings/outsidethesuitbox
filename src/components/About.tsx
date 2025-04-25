@@ -46,10 +46,10 @@ const About = () => {
   }, []);
 
   const features = [
-    "Strategically engineered brand narratives",
-    "Aesthetically advanced creative expressions",
-    "Data-informed decision architecture",
-    "Elite team of industry innovators"
+    "Change is more than skin deep",
+    "Being brave doesn't mean taking risks",
+    "Global doesn't mean all over the place",
+    "Prima donnas aren't allowed"
   ];
 
   return (
@@ -61,13 +61,13 @@ const About = () => {
               className="uppercase tracking-widest text-gold mb-3 text-xs font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
               ref={el => textRefs.current[0] = el}
             >
-              Our Approach
+              Our Philosophy
             </div>
             <h2 
               ref={titleRef}
               className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase opacity-0 translate-y-10 transition-all duration-700 ease-out delay-150"
             >
-              The Philosophy
+              Ideas, Not Egos
             </h2>
             <div 
               className="w-16 h-1 bg-gold mb-8 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-300"
@@ -77,22 +77,20 @@ const About = () => {
               className="text-white/70 mb-8 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-450"
               ref={el => textRefs.current[2] = el}
             >
-              Established in 2018 to redefine the boundaries of what marketing can achieve.
+              Outside the Suitbox was founded on the belief that branding should be brave, bold, and transformative.
             </p>
             <p 
               className="text-white/70 mb-8 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-600"
               ref={el => textRefs.current[3] = el}
             >
-              The truth most agencies won't tell you: exceptional marketing isn't about following trends—it's about setting them. 
-              <span className="text-gold font-semibold"> Outside the Suitbox</span> was founded on the principle that true 
-              brand elevation requires both artistic vision and analytical precision.
+              We've built an agency that champions ideas over egos, a process that rewards brave clients, and a culture that celebrates unconventional thinking. 
+              <span className="text-gold font-semibold"> We will challenge you, we will change you, and you just might change the world.</span>
             </p>
             <p 
               className="text-white/70 mb-8 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-750"
               ref={el => textRefs.current[4] = el}
             >
-              Our methodology combines sophisticated strategy with flawless execution to create brand experiences that 
-              transcend conventional marketing and deliver measurable, sustainable growth.
+              We're more than just designers and strategists; we're partners who are invested in your success. Our collaborative approach ensures that we're always aligned with your vision and goals.
             </p>
             
             <div className="space-y-4 mb-12">
@@ -115,10 +113,10 @@ const About = () => {
               ref={el => textRefs.current[5] = el}
             >
               <a 
-                href="#contact" 
+                href="#partnership" 
                 className="btn-gold inline-block text-xs tracking-widest"
               >
-                INITIATE THE PROCESS
+                LEARN ABOUT OUR PARTNERSHIP APPROACH
               </a>
             </div>
           </div>
@@ -131,7 +129,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-richBlack-dark/80 mix-blend-overlay z-10"></div>
               <img 
                 src="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png"
-                alt="Think outside the suitbox" 
+                alt="Ideas not egos - Outside the Suitbox philosophy" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -144,31 +142,31 @@ const About = () => {
               <div className="space-y-4">
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-xs uppercase tracking-wider">Client Retention</h4>
-                    <span className="text-gold text-xl font-bold">97%</span>
+                    <h4 className="font-bold text-xs uppercase tracking-wider">Quality First</h4>
+                    <span className="text-gold text-xl font-bold">100%</span>
                   </div>
                   <div className="w-full bg-white/10 h-1">
-                    <div className="bg-gold h-full" style={{ width: '97%' }}></div>
+                    <div className="bg-gold h-full" style={{ width: '100%' }}></div>
                   </div>
                 </div>
                 
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-xs uppercase tracking-wider">Average ROI</h4>
-                    <span className="text-gold text-xl font-bold">4.2X</span>
+                    <h4 className="font-bold text-xs uppercase tracking-wider">Bold Ideas</h4>
+                    <span className="text-gold text-xl font-bold">∞</span>
                   </div>
                   <div className="w-full bg-white/10 h-1">
-                    <div className="bg-gold h-full" style={{ width: '84%' }}></div>
+                    <div className="bg-gold h-full" style={{ width: '100%' }}></div>
                   </div>
                 </div>
                 
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-xs uppercase tracking-wider">Industries Transformed</h4>
-                    <span className="text-gold text-xl font-bold">35+</span>
+                    <h4 className="font-bold text-xs uppercase tracking-wider">Egos</h4>
+                    <span className="text-gold text-xl font-bold">0</span>
                   </div>
                   <div className="w-full bg-white/10 h-1">
-                    <div className="bg-gold h-full" style={{ width: '70%' }}></div>
+                    <div className="bg-gold h-full" style={{ width: '0%' }}></div>
                   </div>
                 </div>
               </div>

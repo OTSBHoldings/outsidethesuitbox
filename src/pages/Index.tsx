@@ -60,19 +60,19 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Ragged Edge | Strategic Brand Elevation</title>
-        <meta name="description" content="Ragged Edge helps ambitious brands break free from ordinary marketing approaches to achieve extraordinary results through strategic brand elevation and creative excellence." />
-        <meta name="keywords" content="brand strategy, creative marketing, brand elevation, luxury branding, strategic marketing, digital campaigns, Ragged Edge, ideas not egos" />
-        <meta property="og:title" content="Ragged Edge | Strategic Brand Elevation" />
-        <meta property="og:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
+        <title>Outside the Suitbox | Branding for the Bold</title>
+        <meta name="description" content="Outside the Suitbox partners with brave brands to challenge conventions, champion ideas not egos, and create brands that resonate with audiences." />
+        <meta name="keywords" content="branding agency, bold branding, disruptive branding, brand strategy, creative marketing, brand elevation, ideas not egos" />
+        <meta property="og:title" content="Outside the Suitbox | Branding for the Bold" />
+        <meta property="og:description" content="We champion ideas, not egos. Creating brave brands that challenge conventions and resonate with audiences." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://raggededge.com" />
+        <meta property="og:url" content="https://outsidethesuitbox.com" />
         <meta property="og:image" content="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ragged Edge | Strategic Brand Elevation" />
-        <meta name="twitter:description" content="We engineer sophisticated brand experiences that outperform, outclass, and outlast the competition." />
+        <meta name="twitter:title" content="Outside the Suitbox | Branding for the Bold" />
+        <meta name="twitter:description" content="We champion ideas, not egos. Creating brave brands that challenge conventions and resonate with audiences." />
         <meta name="twitter:image" content="/lovable-uploads/848a80ab-bae9-4698-87e1-9669b519f75e.png" />
-        <link rel="canonical" href="https://raggededge.com" />
+        <link rel="canonical" href="https://outsidethesuitbox.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="theme-color" content="#0A0A0A" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
