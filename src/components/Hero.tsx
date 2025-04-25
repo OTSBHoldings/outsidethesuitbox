@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -71,7 +72,10 @@ const Hero = () => {
       {/* Decorative border */}
       <div className="absolute inset-0 pointer-events-none z-10 border-[12px] border-gold/10 m-8 sm:m-12 md:m-16 lg:m-20"></div>
       
-      {/* Scroll indicator */}
+      {/* Moved gold line below the main content */}
+      <div className="absolute bottom-48 left-0 right-0 h-px bg-gold/30 z-20"></div>
+      
+      {/* Scroll indicator moved below the gold line */}
       <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center opacity-75 hover:opacity-100 transition-opacity">
         <span className="text-white text-xs tracking-widest mb-2">SCROLL</span>
         <div className="w-[1px] h-12 bg-white/60 animate-pulse"></div>

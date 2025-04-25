@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -37,7 +38,7 @@ const Navbar = () => {
           <Link to="/investments" className="nav-link text-xs uppercase tracking-widest">Investments</Link>
           <Link 
             to="/contact" 
-            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 bg-gradient-to-r from-gold via-gold-light to-gold bg-[length:200%_100%] animate-[shimmer_8s_linear_infinite]"
+            className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 nav-contact-shimmer"
           >
             Contact
           </Link>
@@ -61,7 +62,7 @@ const Navbar = () => {
           <Link to="/team" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Team</Link>
           <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</Link>
           <Link to="/investments" className="nav-link text-xs uppercase tracking-widest w-fit" onClick={() => setIsMobileMenuOpen(false)}>Investments</Link>
-          <Link to="/contact" className="bg-gold text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest w-fit shimmer-effect" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link to="/contact" className="bg-gold text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest w-fit nav-contact-shimmer" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>

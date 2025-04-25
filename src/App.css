@@ -1,3 +1,4 @@
+
 /* Only keeping essential styles and removing redundancies */
 #root {
   max-width: 100%;
@@ -79,6 +80,27 @@
   background-clip: text;
   animation: shimmer 5s linear infinite;
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Slower shimmer effect for navbar contact button */
+.nav-contact-shimmer {
+  background: linear-gradient(
+    90deg,
+    #D4AF37 0%,
+    #FEE101 20%,
+    #D4AF37 40%,
+    #FEE101 60%,
+    #D4AF37 80%,
+    #FEE101 100%
+  );
+  background-size: 200% auto;
+  animation: slow-shimmer 12s linear infinite;
+}
+
+@keyframes slow-shimmer {
+  to {
+    background-position: 200% center;
+  }
 }
 
 @keyframes shimmer {

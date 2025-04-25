@@ -76,48 +76,48 @@ const Services = () => {
   const services = [
     {
       icon: <Target size={24} />,
-      title: "Brand Strategy",
-      description: "Defining your purpose, vision, and values to create a foundation for all your brand expressions and marketing activities."
+      title: "Strategic Brand Positioning",
+      description: "We precisely position your brand in the market to capture attention, establish authority, and create a distinct competitive advantage that drives growth."
     },
     {
       icon: <Palette size={24} />,
       title: "Visual & Verbal Identity",
-      description: "Crafting a unique and memorable brand identity that communicates your values and resonates with your audience."
+      description: "Beyond logos and colors, we craft comprehensive brand systems that communicate your values and resonate deeply with your target audience across all touchpoints."
     },
     {
       icon: <Compass size={24} />,
-      title: "UX and UI Design",
-      description: "Creating user-centered digital experiences that are intuitive, engaging, and effectively represent your brand."
+      title: "UX and UI Design Excellence",
+      description: "Creating intuitive digital experiences that blend cutting-edge functionality with visually stunning interfaces that convert visitors into loyal customers."
     },
     {
       icon: <MessageSquare size={24} />,
-      title: "Messaging",
-      description: "Developing a compelling brand voice and narrative that cuts through the noise and connects with your audience."
+      title: "Compelling Brand Storytelling",
+      description: "We develop authentic narratives that connect emotionally with your audience, transforming your core values into messages that inspire action and loyalty."
     },
     {
       icon: <Zap size={24} />,
-      title: "Campaigns",
-      description: "Launching impactful marketing campaigns that drive engagement, build awareness, and deliver measurable results."
+      title: "High-Impact Campaign Strategy",
+      description: "Data-driven marketing campaigns that break through the noise, capture attention, and deliver measurable ROI through strategic execution and innovation."
     },
     {
       icon: <Award size={24} />,
-      title: "Film & Photography",
-      description: "Producing high-quality visual content that tells your brand story and captures the imagination of your audience."
+      title: "Premium Film & Photography",
+      description: "Cinematic visual content that elevates your brand story with production values that match the quality of your products and services."
     },
     {
       icon: <Globe size={24} />,
-      title: "Environment Branding",
-      description: "Designing branded spaces that create immersive experiences and bring your brand to life in the physical world."
+      title: "Immersive Environment Branding",
+      description: "Transform physical spaces into powerful brand experiences that engage all senses and create memorable impressions that reinforce your brand identity."
     },
     {
       icon: <BadgeCheck size={24} />,
-      title: "Brand Guardianship",
-      description: "Ensuring brand consistency across all touchpoints to build recognition and trust with your audience."
+      title: "Strategic Brand Guardianship",
+      description: "Protecting and evolving your brand with systems that ensure consistency while allowing controlled flexibility to adapt to market changes."
     },
     {
       icon: <Briefcase size={24} />,
-      title: "Employer Branding",
-      description: "Attracting and retaining top talent by creating a compelling employer brand that reflects your company culture."
+      title: "Transformative Employer Branding",
+      description: "Attract and retain top industry talent by showcasing your company culture and values through authentic employer branding strategies."
     }
   ];
 
@@ -130,11 +130,11 @@ const Services = () => {
             ref={titleRef}
             className="text-3xl md:text-4xl font-display font-bold mb-6 uppercase opacity-0 translate-y-10 transition-all duration-700 ease-out delay-150"
           >
-            Our Arsenal of Lovable Branding Services
+            Our Arsenal of Brand Transformation Services
           </h2>
           <div className="w-16 h-1 bg-gold mb-8 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-300" ref={subtitleRef}></div>
           <p className="text-white/70 opacity-0 translate-y-10 transition-all duration-700 ease-out delay-450" ref={subtitleRef}>
-            We offer a comprehensive suite of branding services designed to help you stand out in a crowded marketplace. Whether you're looking to define your brand strategy, create a visual identity, or launch a marketing campaign, we have the expertise to help you succeed.
+            We deliver industry-leading branding services designed for organizations ready to dominate their markets. Our strategic approach focuses on creating lasting value through distinctive positioning, compelling storytelling, and unforgettable brand experiences that drive measurable business growth.
           </p>
         </div>
 
