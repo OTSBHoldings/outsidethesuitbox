@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -29,10 +30,10 @@ const Hero = () => {
       
       {/* Main content layout */}
       <div className="container mx-auto relative z-20 flex flex-col min-h-[calc(120vh-120px)] pt-20 md:pt-10">
-        <div className="flex flex-col items-start justify-center h-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+        <div className="flex flex-col items-center justify-center h-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 text-center">
           <div className="w-full max-w-4xl mt-20">
             <div 
-              className="mb-6 text-gold text-sm uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
+              className="mb-6 text-gold text-xs uppercase tracking-widest font-medium opacity-0 translate-y-10 transition-all duration-700 ease-out"
               ref={subtitleRef}
             >
               Disrupt. Scale. Dominate.
@@ -40,23 +41,23 @@ const Hero = () => {
             
             <h1 
               ref={titleRef}
-              className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 opacity-0 translate-y-10 transition-all duration-1000 ease-out leading-[1.1]"
+              className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-8 opacity-0 translate-y-10 transition-all duration-1000 ease-out leading-[1.1]"
             >
               <span className="block mb-3">YOU DON'T NEED</span>
               <span className="block mb-3">ANOTHER AGENCY.</span>
-              <span className="gold-text shimmer-effect text-6xl md:text-8xl lg:text-9xl">YOU NEED AN EMPIRE.</span>
+              <span className="gold-text shimmer-effect text-5xl md:text-7xl lg:text-8xl">YOU NEED AN EMPIRE.</span>
             </h1>
             
             <p 
               ref={subtitleRef}
-              className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl opacity-0 translate-y-10 transition-all duration-1000 ease-out leading-relaxed"
+              className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto opacity-0 translate-y-10 transition-all duration-1000 ease-out leading-relaxed"
             >
               We're not here to play small. We acquire and transform brands into market leaders through ruthless execution and strategic positioning. No fluff. No BS. Just results that speak for themselves.
             </p>
             
             <div 
               ref={buttonRef}
-              className="flex flex-col sm:flex-row gap-6 mt-20 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+              className="flex flex-col sm:flex-row justify-center gap-6 mt-20 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
             >
               <Link to="/portfolio" className="btn-gold group text-sm tracking-widest flex items-center justify-center px-10 py-3">
                 SEE THE PROOF
