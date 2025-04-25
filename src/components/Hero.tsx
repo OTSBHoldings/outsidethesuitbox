@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -33,7 +32,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32" 
+      aria-label="Hero section"
+    >
       {/* Background image with optimized loading */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-richBlack-dark/70 z-10"></div>
