@@ -1,33 +1,53 @@
 
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://raggededge.com/sitemap.xml
+# Sitemap location
+Sitemap: https://outsidethesuitbox.com/sitemap.xml
 
-# Allow crawling of all content
+# Allow GoogleBot full access
 User-agent: Googlebot
 Allow: /
 
+# Allow BingBot full access
 User-agent: Bingbot
 Allow: /
 
+# Allow specific AI crawlers
+User-agent: GPTBot
+Allow: /
+
+# Allow Slurp (Yahoo) full access
 User-agent: Slurp
 Allow: /
 
+# Allow DuckDuckBot full access  
 User-agent: DuckDuckBot
 Allow: /
 
+# Allow Baidu's crawler
 User-agent: Baiduspider
 Allow: /
 
+# Allow Yandex crawler
 User-agent: Yandex
 Allow: /
 
+# Allow Sogou crawler
 User-agent: Sogou
 Allow: /
 
+# Social media crawlers
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
+Allow: /
+
+# OutsideSEO's own crawlers
+User-agent: OutsideSEOBot
+Allow: /
+
+User-agent: OutsideSEOAudit
 Allow: /
